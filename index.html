@@ -1,0 +1,330 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   FIRST AIDS App
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .hidden-section {
+      display: none;
+    }
+  </style>
+  <script>
+   function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function showDetail(detailId) {
+      showSection(detailId);
+    }
+
+    function goBack() {
+      showSection('home');
+    }
+  </script>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <header class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+     FIRST AIDS
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:underline cursor-pointer" onclick="showSection('home')">
+        Beranda
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline cursor-pointer" onclick="showSection('about')">
+        Tentang
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline cursor-pointer" onclick="showSection('services')">
+        Layanan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline cursor-pointer" onclick="showSection('contact')">
+        Kontak
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <section class="my-8" id="home">
+    <h3 class="text-2xl font-bold mb-4">
+     Beranda
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail1')">
+      <img alt="luka1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="luka1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Luka Bakar
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 1.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail2')">
+      <img alt="patahtulang1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="patahtulang1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Patah Tulang
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 2.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail3')">
+      <img alt="keseleo1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="keseleo1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Keseleo
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 3.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail4')">
+      <img alt="tersedak1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="tersedak1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Orang Tersedak
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 4.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail5')">
+      <img alt="mimisan1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="mimisan1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Mimisan
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 5.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail6')">
+      <img alt="pingsa1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="pingsan1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Orang Pingsan
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 6.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail1">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Luka Bakar
+    </h3>
+    <img alt="luka2.jpg" class="w-full h-auto object-cover rounded mb-4" src="luka2.jpg"/>
+    <p class="text-lg mb-4">
+     Luka bakar adalah kerusakan pada kulit atau jaringan tubuh yang disebabkan oleh panas, bahan kimia, listrik, sinar matahari, atau radiasi. Pertolongan pertama pada luka bakar meliputi langkah-langkah berikut:
+    </p>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Dinginkan area yang terbakar dengan air mengalir selama 10-20 menit.
+     </li>
+     <li>
+      Hindari menggunakan es atau air es karena dapat menyebabkan kerusakan lebih lanjut.
+     </li>
+     <li>
+      Tutupi luka dengan kain bersih atau perban steril.
+     </li>
+     <li>
+      Jangan pecahkan lepuhan yang terbentuk.
+     </li>
+     <li>
+      Segera cari bantuan medis jika luka bakar parah.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail2">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Patah Tulang
+    </h3>
+    <img alt="patahtulang2.jpg" class="w-full h-auto object-cover rounded mb-4" src="patahtulang2.jpg"/>
+    <p class="text-lg mb-4">
+     Patah tulang adalah kondisi di mana tulang mengalami keretakan atau patah. Pertolongan pertama pada patah tulang meliputi langkah-langkah berikut:
+    </p>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Jangan menggerakkan bagian tubuh yang patah.
+     </li>
+     <li>
+      Stabilkan bagian tubuh yang patah dengan menggunakan bidai atau bahan keras lainnya.
+     </li>
+     <li>
+      Gunakan es untuk mengurangi pembengkakan.
+     </li>
+     <li>
+      Segera cari bantuan medis.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail3">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Keseleo
+    </h3>
+    <img alt="keseleo.jpg" class="w-full h-auto object-cover rounded mb-4" src="keseleo.jpg"/>
+    <p class="text-lg mb-4">
+     Keseleo adalah cedera pada ligamen yang menghubungkan tulang pada sendi. Pertolongan pertama pada keseleo meliputi langkah-langkah berikut:
+    </p>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Istirahatkan bagian tubuh yang keseleo.
+     </li>
+     <li>
+      Gunakan es untuk mengurangi pembengkakan.
+     </li>
+     <li>
+      Balut bagian tubuh yang keseleo dengan perban elastis.
+     </li>
+     <li>
+      Angkat bagian tubuh yang keseleo lebih tinggi dari jantung.
+     </li>
+     <li>
+      Segera cari bantuan medis jika keseleo parah.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail4">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Orang Tersedak
+    </h3>
+    <img alt="tersedak.jpg" class="w-full h-auto object-cover rounded mb-4" src="tersedak.jpg"/>
+    <p class="text-lg mb-4">
+     Tersedak terjadi ketika saluran napas tersumbat oleh makanan atau benda asing. Pertolongan pertama pada orang tersedak meliputi langkah-langkah berikut:
+    </p>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Berikan 5 pukulan punggung di antara tulang belikat.
+     </li>
+     <li>
+      Jika tidak berhasil, lakukan 5 dorongan perut (manuver Heimlich).
+     </li>
+     <li>
+      Ulangi langkah-langkah tersebut hingga benda asing keluar atau bantuan medis tiba.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail5">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Mimisan
+    </h3>
+    <img alt="mimisan2.jpg" class="w-full h-auto object-cover rounded mb-4" src="mimisan2.jpg"/>
+    <p class="text-lg mb-4">
+     Mimisan adalah pendarahan dari hidung yang disebabkan oleh pecahnya pembuluh darah di dalam hidung. Pertolongan pertama pada mimisan meliputi langkah-langkah berikut:
+    </p>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Duduk tegak dan condongkan tubuh sedikit ke depan.
+     </li>
+     <li>
+      Jepit bagian lunak hidung dengan ibu jari dan jari telunjuk selama 10-15 menit.
+     </li>
+     <li>
+      Hindari berbaring atau menengadahkan kepala ke belakang.
+     </li>
+     <li>
+      Segera cari bantuan medis jika pendarahan tidak berhenti setelah 20 menit.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail6">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Orang Pingsan
+    </h3>
+    <img alt="pingsan2.jpg" class="w-full h-auto object-cover rounded mb-4" src="pingsan2.jpg"/>
+    <p class="text-lg mb-4">
+     Pingsan adalah kehilangan kesadaran sementara yang disebabkan oleh penurunan aliran darah ke otak. Pertolongan pertama pada orang pingsan meliputi langkah-langkah berikut:
+    </p>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Baringkan orang yang pingsan dengan posisi kaki lebih tinggi dari kepala.
+     </li>
+     <li>
+      Longgarkan pakaian yang ketat.
+     </li>
+     <li>
+      Hindari memberikan makanan atau minuman hingga orang tersebut sadar sepenuhnya.
+     </li>
+     <li>
+      Segera cari bantuan medis jika orang tersebut tidak sadar dalam beberapa menit.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="hidden-section my-8" id="about">
+    <h3 class="text-2xl font-bold mb-4">
+     Tentang Kami
+    </h3>
+    <p class="text-lg">
+     FIRST AIDS adalah aplikasi kesehatan berbasis Android yang dirancang untuk memudahkan masyarakat dalam menerima layanan kesehatan terkait pertolongan pertama sebelum petugas kesehatan tiba. Aplikasi ini dibuat untuk masyarakat umum, terutama di kalangan remaja.
+    </p>
+   </section>
+   <section class="hidden-section my-8" id="services">
+    <h3 class="text-2xl font-bold mb-4">
+     Layanan Kami
+    </h3>
+    <p class="text-lg">
+     Kami menyediakan berbagai layanan pertolongan pertama dan sumber daya edukasi untuk membantu Anda menangani keadaan darurat dengan efektif.
+    </p>
+   </section>
+   <section class="hidden-section my-8" id="contact">
+    <h3 class="text-2xl font-bold mb-4">
+     Hubungi Kami
+    </h3>
+    <p class="text-lg">
+     Untuk informasi lebih lanjut, silakan hubungi kami di kelompok5@gmail.com atau telepon di 
+     081333957922
+     085819825132
+     082182805667
+    </p>
+    <div class="mt-4">
+     <a class="text-green-500 hover:text-green-700" href="https://wa.me/082182805667" target="_blank">
+      <i class="fab fa-whatsapp fa-2x"></i>
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 mt-8">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2024 FIRST AIDS. All rights reserved.
+    </p>
+   </div>
+  </footer>
+  <script>
+   // Show the home section by default
+    showSection('home');
+  </script>
+ </body>
+</html>
